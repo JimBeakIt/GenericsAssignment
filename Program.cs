@@ -10,6 +10,15 @@ namespace GenericsAssignment
     {
         static void Main(string[] args)
         {
+            Employee<string> mName = new Employee<string>();
+            mName.Things = "James ";
+
+            Employee<int> mNum = new Employee<int>();
+            mNum.Things = 30;
+
+            Console.WriteLine(mName.Things + mNum.Things);
+
+            Console.ReadLine();
         }
     }
 }
