@@ -8,6 +8,7 @@ namespace GenericsAssignment
 {
     public class Employee<T>
     {
-        public T Things { get; set; }
+        public List<T> Things { get; set; }
+
     }
 }

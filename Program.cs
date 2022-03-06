@@ -6,17 +6,35 @@ using System.Threading.Tasks;
 
 namespace GenericsAssignment
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Employee<string> mName = new Employee<string>();
-            mName.Things = "James ";
+            Employee<string> Name = new Employee<string>();
 
-            Employee<int> mNum = new Employee<int>();
-            mNum.Things = 30;
 
-            Console.WriteLine(mName.Things + mNum.Things);
+            Name.Things = new List<string>()
+            {
+                "James",
+                "Peter",
+                "Lisa",
+                "Fred"
+            };
+
+
+            Employee<int> Num = new Employee<int>();
+
+            Num.Things = new List<int>()
+            {
+                27,
+                72,
+                30,
+                34
+            };
+
+            Name.Things.ForEach(Console.WriteLine);
+
+            Num.Things.ForEach(Console.WriteLine);
 
             Console.ReadLine();
         }
